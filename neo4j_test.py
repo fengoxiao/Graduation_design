@@ -32,7 +32,7 @@ for record in data:
     to_name=graph.run("Match (n: pig) where n.name ='{}' return n".format(record[3])).data()[0]['n']
 
     # 两种方式都可以添加属性
-    pig_relation = Relationship(from_name, record[2], to_name,name='test')
+    pig_relation = Relationship(from_name, record[2], to_name,name=record[3])
     pig_relation['count'] = 1
     graph.create(pig_relation)
 
