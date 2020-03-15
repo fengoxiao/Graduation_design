@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="657db6b7-f393-4a0d-b293-ea0cb46fc846" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventTriplesExtraction/sentence_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventTriplesExtraction/sentence_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventTriplesExtraction/triple_extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventTriplesExtraction/triple_extraction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/database_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neo4j_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo4j_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neo4j_test_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo4j_test_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pig_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/pig_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Knowledge_map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+            <state relative-caret-position="240">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#46#136#0" expanded="true" />
               </folding>
@@ -373,12 +367,12 @@
       <workItem from="1584001144015" duration="1681000" />
       <workItem from="1584063744638" duration="5299000" />
       <workItem from="1584186186392" duration="599000" />
-      <workItem from="1584236131828" duration="13673000" />
+      <workItem from="1584236131828" duration="14720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108620000" />
+    <option name="totallyTimeSpent" value="109667000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -408,7 +402,7 @@
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.32956153" />
-      <window_info active="true" anchor="bottom" id="Run" order="12" visible="true" weight="0.57932013" />
+      <window_info anchor="bottom" id="Run" order="12" weight="0.57932013" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -708,8 +702,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Knowledge_map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        <state relative-caret-position="240">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="e#46#136#0" expanded="true" />
           </folding>
