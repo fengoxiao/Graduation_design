@@ -25,6 +25,7 @@ class TripleExtractor:
                          postags[word_index][0] not in ['w', 'u', 'x'] and words[word_index]])
             if s  and o:
                 return '1', [s, v, o]
+        #测试功能
         # elif 'A0' in role_info:
         #     s = ''.join([words[word_index] for word_index in range(role_info['A0'][1], role_info['A0'][2] + 1) if
         #                  postags[word_index][0] not in ['w', 'u', 'x']])
@@ -34,6 +35,7 @@ class TripleExtractor:
         #     o = ''.join([words[word_index] for word_index in range(role_info['A1'][1], role_info['A1'][2]+1) if
         #                  postags[word_index][0] not in ['w', 'u', 'x']])
         #     return '3', [v, o]
+        # 测试功能
         return '4', []
 
     '''三元组抽取主函数'''
@@ -101,7 +103,8 @@ class TripleExtractor:
 
     '''程序主控函数'''
     def triples_main(self, content):
-        sentences = self.split_sents(content)
+        #sentences = self.split_sents(content)
+        sentences = SentenceSplitter.split(content)
         svos = []
         for sentence in sentences:
             words, postags, child_dict_list, roles_dict, arcs = self.parser.parser_main(sentence)
@@ -132,12 +135,15 @@ def test():
     当天，数千名巴勒斯坦人在加沙地带边境地区继续“回归大游行”抗议活动。部分示威者燃烧轮胎，并向以军投掷石块、燃烧瓶等，驻守边境的以军士兵向示威人群发射催泪瓦斯并开枪射击。'''
     content6 = '''
     猪爷爷的年龄是15岁。猪奶奶的年龄是14岁。猪爸爸的年龄是10岁。猪妈妈的年龄是9岁。乔治的年龄是2岁。佩奇的年龄是1岁。
-    猪爸爸和猪妈妈的关系是夫妻。猪爷爷和猪奶奶是夫妻。乔治和佩奇是姐弟。猪爷爷和猪爸爸是父子。猪爸爸和佩奇是父子。
+    猪爸爸和猪妈妈的关系是夫妻。猪爷爷和猪奶奶的关系是夫妻。乔治和佩奇的关系是姐弟。猪爷爷和猪爸爸的关系是父子。猪爸爸和佩奇的关系是父子。
     '''
+    content7='连云港籍货船“神洲19”航行至舟山大鱼山北侧海域时沉没，船上6人遇险落水。'
     extractor = TripleExtractor()
     svos = extractor.triples_main(content6)
     for svo in svos:
         print(svo)
     #print('svos', svos)
 
-test()
+
+if __name__ == '__main__':
+    test()

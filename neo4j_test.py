@@ -28,11 +28,21 @@ matcher = NodeMatcher(graph)
 # print(type(buff))
 
 for record in data:
-    from_name=graph.run("Match (n: pig) where n.name ='{}' return n".format(record[1])).data()[0]['n']
-    to_name=graph.run("Match (n: pig) where n.name ='{}' return n".format(record[3])).data()[0]['n']
-
+    query_from_name=graph.run("Match (n: pig) where n.name ='{}' return n".format(record[1])).data()
+    query_to_name=graph.run("Match (n: pig) where n.name ='{}' return n".format(record[3])).data()
+    #print(query_to_name)
     # 两种方式都可以添加属性
-    pig_relation = Relationship(from_name, record[2], to_name,name=record[3])
+    if not query_from_name:
+        from_name = Node("pig", name=record[1], age=0)
+        graph.create(from_name)
+    else:
+        from_name=query_from_name[0]['n']
+    if not query_to_name:
+        to_name = Node("pig", name=record[3], age=0)
+        graph.create(to_name)
+    else:
+        to_name=query_to_name[0]['n']
+    pig_relation = Relationship(from_name, record[2], to_name,name=record[4])
     pig_relation['count'] = 1
     graph.create(pig_relation)
 

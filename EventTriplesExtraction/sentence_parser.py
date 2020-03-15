@@ -5,15 +5,17 @@
 # Date: 18-3-10
 
 import os
-from pyltp import Segmentor, Postagger, Parser, NamedEntityRecognizer, SementicRoleLabeller
+from pyltp import SentenceSplitter,Segmentor, Postagger, Parser, NamedEntityRecognizer, SementicRoleLabeller
 class LtpParser:
     def __init__(self):
         LTP_DIR = "D:\python\ltp_data_v3.4.0"
         self.segmentor = Segmentor()
-        self.segmentor.load(os.path.join(LTP_DIR, "cws.model"))
+        cws_model_path=os.path.join(LTP_DIR, "cws.model")
+        self.segmentor.load_with_lexicon(cws_model_path, 'D:\python\ltp_data_v3.4.0\lexicon')  # 加载模型，第二个参数是您的外部词典文件路径
 
         self.postagger = Postagger()
-        self.postagger.load(os.path.join(LTP_DIR, "pos.model"))
+        pos_model_path=os.path.join(LTP_DIR, "pos.model")
+        self.postagger.load_with_lexicon(pos_model_path, 'D:\python\ltp_data_v3.4.0\lexicon_1')
 
         self.parser = Parser()
         self.parser.load(os.path.join(LTP_DIR, "parser.model"))
@@ -30,6 +32,7 @@ class LtpParser:
         roles = self.labeller.label(words, postags, arcs)
         roles_dict = {}
         for role in roles:
+            #print('role.index:',role.index)
             roles_dict[role.index] = {arg.name:[arg.name,arg.range.start, arg.range.end] for arg in role.arguments}
         return roles_dict
 
