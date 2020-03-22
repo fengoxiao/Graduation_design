@@ -9,6 +9,7 @@ import re
 class TripleExtractor:
     def __init__(self):
         self.parser = LtpParser()
+        self.name_entity_dic = {'Ni': '机构', 'Nh': '人物', 'Ns': '地点'}
 
     '''文章分句处理, 切分长句，冒号，分号，感叹号等做切分标识'''
     def split_sents(self, content):
@@ -112,6 +113,42 @@ class TripleExtractor:
             svos += svo
 
         return svos
+
+    def is_name_entity(self,entity):
+        return entity != 'O'
+
+    def entity_annotation(self, entity):#实体标签识别
+        words,postags,netags=self.parser.tag_entity_annotation(entity)
+        # print('\t'.join(words))
+        # print('\t'.join(postags))
+        name_entity=list(filter(self.is_name_entity,netags))
+        entity_label=None
+        if not name_entity:
+            flag_n=[0,1]
+            flag_v=[0,1]
+            for name in postags:
+                if name=='n':
+                    flag_n[0]=1
+                else:
+                    flag_n[1]=0
+                if name =='v':
+                    flag_v[0]=1
+                else:
+                    flag_v[1]=0
+            if flag_n[0]:
+                if flag_v[0]:
+                    entity_label = '事件'
+                else:
+                    entity_label='名词'
+            else:
+                if flag_v[0]:
+                    entity_label = '动作'
+                else:
+                    entity_label='其他'
+        else:
+            entity_type=name_entity[-1]
+            entity_label=self.name_entity_dic[entity_type[-2:]]
+        return entity_label
 
 
 '''测试'''

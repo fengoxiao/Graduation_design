@@ -24,15 +24,65 @@ def creat_triple_table(table,data):
     return result
 
 def select_triple_table(table,keys):
-    sql = "select {keys} from {table} limit 5".format(keys=', '.join(keys),table=table)
+    sql = "select {keys} from {table}".format(keys=', '.join(keys),table=table)
+    #sql = "select {keys} from {table} limit 5".format(keys=', '.join(keys),table=table)
     cursor.execute(sql)
     data = cursor.fetchall()
     return data
+
+def record_had_extracting(triple_table,original_text_table,original_text_table_id):
+    sql="select original_text_table_id from {triple_table} where original_text_table='{original_text_table}' and original_text_table_id={original_text_table_id}".format(triple_table=triple_table,original_text_table=original_text_table,original_text_table_id=original_text_table_id)
+    cursor_neo4j.execute(sql)
+    data = cursor_neo4j.fetchall()
+    if not data:  # 空
+        return False
+    return True
+
+def neo4j_select_triple_table(table,keys):
+    sql = "select {keys} from {table} limit 100".format(keys=', '.join(keys),table=table)
+    #sql = "select {keys} from {table} limit 5".format(keys=', '.join(keys),table=table)
+    cursor_neo4j.execute(sql)
+    data = cursor_neo4j.fetchall()
+    return data
+
 def select_triple_table_neo4j(table):
     sql = "select * from {table}".format(table=table)
     cursor_neo4j.execute(sql)
     data = cursor_neo4j.fetchall()
     return data
+
+def creat_table_neo4j(table):
+    sql="""
+    CREATE TABLE IF NOT EXISTS {table_name} (
+          `id` int(10) NOT NULL AUTO_INCREMENT COMMENT '索引',
+          `triple_subject` varchar(100) DEFAULT NULL COMMENT '主语',
+          `triple_subject_label` varchar(100) DEFAULT NULL COMMENT '主语标签',
+          `triple_verb` varchar(100) DEFAULT NULL COMMENT '动词',
+          `triple_object` varchar(100) DEFAULT NULL COMMENT '宾语',
+          `triple_object_label` varchar(100) DEFAULT NULL COMMENT '宾语标签',
+          `original_text` varchar(100) DEFAULT NULL COMMENT '原文',
+          `original_text_table` varchar(100) DEFAULT NULL COMMENT '原文的表',
+          `original_text_table_id` int(10) DEFAULT NULL COMMENT '原文的表的id',
+          PRIMARY KEY (`id`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+        """.format(table_name=table)
+    cursor_neo4j.execute(sql)
+
+def truncate_table_neo4j(table):
+    sql_truncate="truncate table {table_name}".format(table_name=table)
+    cursor_neo4j.execute(sql_truncate)
+
+
+
+def table_not_exists(table):
+    sql = "show tables"
+    cursor_neo4j.execute(sql)
+    tables = cursor_neo4j.fetchall()
+    for record in tables:
+        if table==record[0]:
+            return False
+    return True
+
 '''
 keys =('id','news_title','news_summary')
 data=select_triple_table('sea_news_domestic',keys)

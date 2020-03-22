@@ -69,6 +69,12 @@ class LtpParser:
         roles_dict = self.format_labelrole(words, postags)
         return words, postags, child_dict_list, roles_dict, format_parse_list
 
+    def tag_entity_annotation(self,entity):
+        words = self.segmentor.segment(entity)
+        postags = self.postagger.postag(words)
+        netags = self.recognizer.recognize(words, postags)  # 命名实体识别
+        #print('\t'.join(netags))
+        return words,postags,netags
 
 if __name__ == '__main__':
     parse = LtpParser()

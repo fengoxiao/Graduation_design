@@ -3,6 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="657db6b7-f393-4a0d-b293-ea0cb46fc846" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventTriplesExtraction/sentence_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventTriplesExtraction/sentence_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventTriplesExtraction/triple_extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventTriplesExtraction/triple_extraction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Knowledge_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/Knowledge_map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/database_test_total.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/database_test_total.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/sea_crawler_domestic.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/sea_crawler_domestic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/database_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neo4j_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo4j_interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neo4j_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo4j_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neo4j_test_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo4j_test_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pig_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/pig_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tld.py" beforeDir="false" afterPath="$PROJECT_DIR$/tld.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,34 +24,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extracting_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
-              <caret line="5" column="61" lean-forward="true" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="68" />
-              <folding>
-                <element signature="e#46#85#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/neo4j_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="26" column="14" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="14" />
-              <folding>
-                <element signature="e#15#71#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/neo4j_interface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="192">
+              <caret line="45" column="175" selection-start-line="45" selection-start-column="175" selection-end-line="45" selection-end-column="175" />
             </state>
           </provider>
         </entry>
@@ -48,10 +35,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Knowledge_map.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="1501">
+              <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
               <folding>
-                <element signature="e#46#136#0" expanded="true" />
+                <element signature="e#46#154#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,34 +48,21 @@
         <entry file="file://$PROJECT_DIR$/database_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="218">
-              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+              <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
               <folding>
-                <element signature="e#246#923#0" />
+                <element signature="e#1107#1362#0" />
+                <element signature="e#1571#2407#0" />
+                <element signature="e#2580#3188#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/neo4j_test_2.py">
+        <entry file="file://$PROJECT_DIR$/crawler/database_test_total.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-              <folding>
-                <element signature="e#46#60#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EventTriplesExtraction/triple_extraction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-967">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
-              <folding>
-                <element signature="e#147#199#0" expanded="true" />
-              </folding>
+            <state>
+              <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -108,6 +82,17 @@
       <find>parser.model</find>
       <find>LtpParser</find>
       <find>matcher</find>
+      <find>recognizer</find>
+      <find>集团</find>
+      <find>-N</find>
+      <find>j</find>
+      <find>请观察分词和词性</find>
+      <find>进入应对紧急状态</find>
+      <find>天津</find>
+      <find>v</find>
+      <find>None</find>
+      <find>其他</find>
+      <find>动作</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,7 +118,6 @@
         <option value="$PROJECT_DIR$/crawler/__init__.py" />
         <option value="$PROJECT_DIR$/crawler/sea_crawler_cbhg.py" />
         <option value="$PROJECT_DIR$/crawler/sea_crawler_culture.py" />
-        <option value="$PROJECT_DIR$/crawler/sea_crawler_domestic.py" />
         <option value="$PROJECT_DIR$/crawler/sea_crawler_economics.py" />
         <option value="$PROJECT_DIR$/crawler/sea_crawler_edu.py" />
         <option value="$PROJECT_DIR$/crawler/sea_crawler_international.py" />
@@ -144,18 +128,21 @@
         <option value="$PROJECT_DIR$/lexicon" />
         <option value="$PROJECT_DIR$/extracting/EventTriplesExtraction/__init__.py" />
         <option value="$PROJECT_DIR$/extracting/EventTriplesExtraction/triple_extraction.py" />
+        <option value="$PROJECT_DIR$/extracting_test.py" />
+        <option value="$PROJECT_DIR$/tld.py" />
+        <option value="$PROJECT_DIR$/crawler/database_test_total.py" />
+        <option value="$PROJECT_DIR$/crawler/sea_crawler_domestic.py" />
+        <option value="$PROJECT_DIR$/crawler/crawler_total.py" />
+        <option value="$PROJECT_DIR$/EventTriplesExtraction/sentence_parser.py" />
         <option value="$PROJECT_DIR$/../ltp_data_v3.4.0/lexicon" />
         <option value="$PROJECT_DIR$/../ltp_data_v3.4.0/lexicon_1" />
         <option value="$PROJECT_DIR$/pig_test.py" />
         <option value="$PROJECT_DIR$/EventTriplesExtraction/triple_extraction.py" />
-        <option value="$PROJECT_DIR$/tld.py" />
-        <option value="$PROJECT_DIR$/EventTriplesExtraction/sentence_parser.py" />
-        <option value="$PROJECT_DIR$/extracting_test.py" />
-        <option value="$PROJECT_DIR$/neo4j_test.py" />
         <option value="$PROJECT_DIR$/neo4j_test_2.py" />
+        <option value="$PROJECT_DIR$/neo4j_test.py" />
         <option value="$PROJECT_DIR$/database_test.py" />
-        <option value="$PROJECT_DIR$/neo4j_interface.py" />
         <option value="$PROJECT_DIR$/Knowledge_map.py" />
+        <option value="$PROJECT_DIR$/neo4j_interface.py" />
       </list>
     </option>
   </component>
@@ -260,28 +247,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="extracting_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="毕业设计" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/extracting_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="neo4j_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="毕业设计" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -326,13 +291,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="triple_extraction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="毕业设计" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/EventTriplesExtraction" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EventTriplesExtraction/triple_extraction.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Knowledge_map" />
-        <item itemvalue="Python.extracting_test" />
         <item itemvalue="Python.database_test" />
-        <item itemvalue="Python.neo4j_test_2" />
         <item itemvalue="Python.neo4j_test" />
+        <item itemvalue="Python.neo4j_test_2" />
+        <item itemvalue="Python.triple_extraction" />
       </list>
     </recent_temporary>
   </component>
@@ -368,11 +355,16 @@
       <workItem from="1584063744638" duration="5299000" />
       <workItem from="1584186186392" duration="599000" />
       <workItem from="1584236131828" duration="14720000" />
+      <workItem from="1584322361077" duration="3481000" />
+      <workItem from="1584513197917" duration="14038000" />
+      <workItem from="1584670248600" duration="7787000" />
+      <workItem from="1584757272751" duration="10098000" />
+      <workItem from="1584842851096" duration="17977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109667000" />
+    <option name="totallyTimeSpent" value="163048000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,9 +377,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17560321" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16286863" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -395,14 +386,14 @@
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Python Console" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50067025" side_tool="true" weight="0.9575071" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="12" weight="0.57932013" />
+      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.49932975" weight="0.51699716" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -439,23 +430,25 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/$sea_crawler_international.coverage" NAME="sea_crawler_international Coverage Results" MODIFIED="1582293787969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$sentence_parser.coverage" NAME="sentence_parser Coverage Results" MODIFIED="1584064109793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/EventTriplesExtraction" />
-    <SUITE FILE_PATH="coverage/$database_test.coverage" NAME="database_test Coverage Results" MODIFIED="1584262228495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/$pig_test.coverage" NAME="pig_test Coverage Results" MODIFIED="1583909880092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$database_test.coverage" NAME="database_test Coverage Results" MODIFIED="1584870921230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$pig_test.coverage" NAME="pig_test Coverage Results" MODIFIED="1584692029594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$sea_crawler_mil.coverage" NAME="sea_crawler_mil Coverage Results" MODIFIED="1582290273220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$sea_crawler_culture.coverage" NAME="sea_crawler_culture Coverage Results" MODIFIED="1582202180443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$sea_crawler_tech.coverage" NAME="sea_crawler_tech Coverage Results" MODIFIED="1582289837738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/$Knowledge_map.coverage" NAME="Knowledge_map Coverage Results" MODIFIED="1584265102209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$Knowledge_map.coverage" NAME="Knowledge_map Coverage Results" MODIFIED="1584873009990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$ltp_test.coverage" NAME="ltp_test Coverage Results" MODIFIED="1582767414263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$database_test_total.coverage" NAME="database_test_total Coverage Results" MODIFIED="1584523290613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawler" />
     <SUITE FILE_PATH="coverage/$sea_crawler_trave.coverage" NAME="sea_crawler_trave Coverage Results" MODIFIED="1582270165333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/$neo4j_test.coverage" NAME="neo4j_test Coverage Results" MODIFIED="1584239506339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$crawler_total.coverage" NAME="crawler_total Coverage Results" MODIFIED="1584531978841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawler" />
+    <SUITE FILE_PATH="coverage/$neo4j_test.coverage" NAME="neo4j_test Coverage Results" MODIFIED="1584848024377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$sea_crawler_economics.coverage" NAME="sea_crawler_economics Coverage Results" MODIFIED="1582186099760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/$neo4j_test_2.coverage" NAME="neo4j_test_2 Coverage Results" MODIFIED="1584257334628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$neo4j_test_2.coverage" NAME="neo4j_test_2 Coverage Results" MODIFIED="1584779102431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$sea_crawler_cbhg.coverage" NAME="sea_crawler_cbhg Coverage Results" MODIFIED="1583028387026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawler" />
-    <SUITE FILE_PATH="coverage/$tld.coverage" NAME="tld Coverage Results" MODIFIED="1584002795222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/$triple_extraction.coverage" NAME="triple_extraction Coverage Results" MODIFIED="1583721816839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/EventTriplesExtraction" />
+    <SUITE FILE_PATH="coverage/$tld.coverage" NAME="tld Coverage Results" MODIFIED="1584518018948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$triple_extraction.coverage" NAME="triple_extraction Coverage Results" MODIFIED="1584765432952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/EventTriplesExtraction" />
     <SUITE FILE_PATH="coverage/$sea_crawler_total.coverage" NAME="sea_crawler_total Coverage Results" MODIFIED="1582177698794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$extracting_test.coverage" NAME="extracting_test Coverage Results" MODIFIED="1584262454432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/$sea_crawler_domestic.coverage" NAME="sea_crawler_domestic Coverage Results" MODIFIED="1582344372434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$sea_crawler_domestic.coverage" NAME="sea_crawler_domestic Coverage Results" MODIFIED="1584527613797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawler" />
     <SUITE FILE_PATH="coverage/$test.coverage" NAME="test Coverage Results" MODIFIED="1582167671679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
@@ -496,62 +489,6 @@
     <entry file="file://$PROJECT_DIR$/crawler/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_international.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_mil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_trave.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_tech.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_edu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_economics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_domestic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_culture.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plain" />
     <entry file="file://$PROJECT_DIR$/../ltp_data_v3.4.0/plain" />
     <entry file="file://$PROJECT_DIR$/../ltp_data_v3.4.0/version">
@@ -578,13 +515,6 @@
     <entry file="file://$PROJECT_DIR$/extracting/EventTriplesExtraction/sentence_parser.py" />
     <entry file="file://$PROJECT_DIR$/extracting/EventTriplesExtraction/__init__.py" />
     <entry file="file://$PROJECT_DIR$/extracting/EventTriplesExtraction/triple_extraction.py" />
-    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_cbhg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ltp_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -595,117 +525,244 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ltp_data_v3.4.0/lexicon">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EventTriplesExtraction/sentence_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1824">
-          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-          <folding>
-            <element signature="e#146#155#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tld.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ltp_data_v3.4.0/lexicon_1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawler/database_test_total.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2862">
-          <caret line="65" column="32" lean-forward="true" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pig_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
-          <folding>
-            <element signature="e#46#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EventTriplesExtraction/triple_extraction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-967">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="e#147#199#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/extracting_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="5" column="61" lean-forward="true" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="68" />
+        <state relative-caret-position="192">
+          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="68" />
           <folding>
             <element signature="e#46#85#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/neo4j_test_2.py">
+    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_international.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-96">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_cbhg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4386">
+          <caret line="109" column="48" lean-forward="true" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="54" />
+          <folding>
+            <element signature="e#46#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_culture.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1266">
+          <caret line="51" column="56" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="56" />
+          <folding>
+            <element signature="e#46#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_economics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="51" column="53" lean-forward="true" selection-start-line="51" selection-start-column="53" selection-end-line="51" selection-end-column="59" />
+          <folding>
+            <element signature="e#46#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_edu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="99" column="53" selection-start-line="99" selection-start-column="47" selection-end-line="99" selection-end-column="53" />
+          <folding>
+            <element signature="e#46#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_mil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="106" column="47" lean-forward="true" selection-start-line="106" selection-start-column="47" selection-end-line="106" selection-end-column="53" />
+          <folding>
+            <element signature="e#46#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_tech.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <caret line="215" column="48" lean-forward="true" selection-start-line="215" selection-start-column="48" selection-end-line="215" selection-end-column="54" />
           <folding>
-            <element signature="e#46#60#0" expanded="true" />
+            <element signature="e#46#61#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_trave.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2288">
+          <caret line="53" column="49" lean-forward="true" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="55" />
+          <folding>
+            <element signature="e#46#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tld.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/sea_crawler_domestic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="28" column="78" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="78" />
+          <folding>
+            <element signature="e#46#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-204463645/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="3671" column="8" selection-start-line="3671" selection-start-column="8" selection-end-line="3671" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ltp_data_v3.4.0/lexicon">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/py2neo/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/crawler_total.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="109" column="26" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
+          <folding>
+            <element signature="e#46#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pig_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+          <folding>
+            <element signature="e#46#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ltp_data_v3.4.0/lexicon_1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/py2neo/cypher/encoding.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="49" column="12" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/py2neo/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="872" column="17" selection-start-line="872" selection-start-column="8" selection-end-line="872" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo4j_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="14" />
+        <state relative-caret-position="288">
+          <caret line="42" column="41" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="41" />
           <folding>
             <element signature="e#15#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/EventTriplesExtraction/sentence_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="76" column="35" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="35" />
+          <folding>
+            <element signature="e#146#155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EventTriplesExtraction/triple_extraction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+          <folding>
+            <element signature="e#147#199#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/neo4j_test_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/database_test_total.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
           <folding>
-            <element signature="e#246#923#0" />
+            <element signature="e#1107#1362#0" />
+            <element signature="e#1571#2407#0" />
+            <element signature="e#2580#3188#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/neo4j_interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="192">
+          <caret line="45" column="175" selection-start-line="45" selection-start-column="175" selection-end-line="45" selection-end-column="175" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Knowledge_map.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="1501">
+          <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
           <folding>
-            <element signature="e#46#136#0" expanded="true" />
+            <element signature="e#46#154#0" expanded="true" />
           </folding>
         </state>
       </provider>

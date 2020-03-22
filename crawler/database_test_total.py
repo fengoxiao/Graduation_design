@@ -6,6 +6,37 @@ db = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='zw6262099
 
 #创建游标
 cursor = db.cursor()
+#添加数据，表明，属性字典
+def creat_sea_news(table,data):
+    result=True
+    keys = ', '.join(data.keys())
+    values = ', '.join(['%s'] * len(data))
+    sql = 'INSERT INTO {table}({keys}) VALUES ({values})'.format(table=table, keys=keys, values=values)
+    try:
+        cursor.execute(sql, tuple(data.values()))
+        db.commit()
+    except:
+        result=False
+        db.rollback()
+    return result
+
+def select_sea_news(table,url):
+    sql = "select news_web_url from {table} where news_web_url ='{url}'".format(table=table,url=url)
+    cursor.execute(sql)
+    data = cursor.fetchall()
+    if not data:#空
+        return False
+    return True
+# result=select_sea_news('sea_news_domestic','http://www.hellosea.net//Economics/1/72876.html')
+# print(result)
+'''
+#变量查询
+sql="select * from {table} where {id} =%s and pig_age=%s".format(table='pig',id='id')
+cursor.execute(sql,(1,10))
+data = cursor.fetchall()
+for record in data:
+    print(record)
+'''
 
 def retrieve_interface(sql):#查询
     cursor.execute(sql)
@@ -57,6 +88,8 @@ def mil_retrieve_interface(url):
         if url==record[0]:
             return False
     return True
+
+
 
 def mil_create_interface(a,b,c,d,e,f,g):#创建
     sql = "INSERT INTO sea_news_mil(news_title,news_type,news_date,news_summary,news_content,news_web_url,news_source) VALUES(%s,%s,%s,%s,%s,%s,%s)"

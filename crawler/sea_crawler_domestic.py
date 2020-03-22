@@ -45,12 +45,6 @@ for page in range(1,201):
                 string = content.xpath('./text()')
                 if string:
                     news_content += clean_tag(string[0])[2:]
-            # print(news_title)
-            # print(news_date)
-            # print(news_summary)
-            # print(news_content)
-            # print(news_web_url)
-            # print(news_source)
             if not news_content:
                 continue
             if domestic_create_interface(news_title,'国内资讯',news_date,news_summary,news_content,news_web_url,news_source):

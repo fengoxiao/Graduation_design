@@ -37,6 +37,11 @@ for record in data:
         graph.create(from_name)
     else:
         from_name=query_from_name[0]['n']
+
+        print(from_name.has_label('zw'))#判断是否有label
+
+        from_name.add_label('zw')#增加label
+        print(from_name.has_label('zw'))  # 判断是否有label
     if not query_to_name:
         to_name = Node("pig", name=record[3], age=0)
         graph.create(to_name)

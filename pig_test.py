@@ -29,6 +29,8 @@ parser.load(par_model_path)  # 加载模型
 labeller = SementicRoleLabeller() # 初始化实例
 labeller.load(srl_model_path)  # 加载模型
 
+def is_name_entity(entity):
+    return entity!='O'
 
 
 def show_detail(sent):
@@ -39,6 +41,9 @@ def show_detail(sent):
     print('\t'.join(postags))
     netags = recognizer.recognize(words, postags)  # 命名实体识别
     print('\t'.join(netags))
+    name_entity=list(filter(is_name_entity,netags))
+    print('\t'.join(name_entity))
+
     arcs = parser.parse(words, postags)  # 句法分析
     print("\t".join("%d:%s" % (arc.head, arc.relation) for arc in arcs))
 
