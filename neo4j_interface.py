@@ -44,7 +44,7 @@ def creat_map(record):
             to_name.add_label(original_object_label)  # 增加label
     try:
         Cypher_sql='Match (n:%s)-[:%s]->(m:%s) where n.name="%s"and m.name="%s" return m'%(original_subject_label,relation_verb,original_object_label,subject_name,object_name)
-        print(Cypher_sql)
+        # print(Cypher_sql)
         relation_exist=graph.run(Cypher_sql).data()
     except:
         return 0

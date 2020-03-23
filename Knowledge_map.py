@@ -8,8 +8,8 @@ from neo4j_interface import creat_map
 #match (n) detach delete n
 
 extractor = TripleExtractor()
-#table_list=['domestic','culture','cbhg','economics','edu','international','mil','tech','trave']
-table_list=['trave']
+table_list=['domestic','culture','cbhg','economics','edu','international','mil','tech','trave']
+#table_list=['trave']
 
 #清空表
 #truncate_table_neo4j("triple_{}".format('domestic'))

@@ -101,9 +101,10 @@ for key_level_1,value_level_1 in news_total.items():
                         print('存储失败,重试')
                         time.sleep(1)
                         if creat_sea_news(table_name, news_dic):
-                            print('成功')
+                            count += 1
+                            print('第{}页，{}第{}个新闻爬取成功'.format(page, table_name, count))
                         else:
-                            print('失败')
+                            print('存储重试失败')
                     time.sleep(5)
             except:
                 print('{}第{}页新闻爬取异常'.format(table_name,page))
