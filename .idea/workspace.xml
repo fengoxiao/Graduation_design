@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="657db6b7-f393-4a0d-b293-ea0cb46fc846" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventTriplesExtraction/sentence_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventTriplesExtraction/sentence_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EventTriplesExtraction/triple_extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/EventTriplesExtraction/triple_extraction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Knowledge_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/Knowledge_map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crawler/database_test_total.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/database_test_total.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/database_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neo4j_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/neo4j_interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pig_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/pig_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tld.py" beforeDir="false" afterPath="$PROJECT_DIR$/tld.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/crawler_total_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/crawler_total_v2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,12 +56,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crawler/crawler_total_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="104" column="17" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
+            <state relative-caret-position="528">
+              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
               <folding>
                 <element signature="e#46#61#0" expanded="true" />
                 <element signature="e#237#312#0" />
-                <element signature="e#1509#4748#0" />
               </folding>
             </state>
           </provider>
@@ -197,7 +187,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="975" />
@@ -423,12 +413,12 @@
       <workItem from="1585279767007" duration="807000" />
       <workItem from="1585288936071" duration="7882000" />
       <workItem from="1585360014843" duration="5398000" />
-      <workItem from="1585375848618" duration="834000" />
+      <workItem from="1585375848618" duration="1173000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193722000" />
+    <option name="totallyTimeSpent" value="194061000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -915,12 +905,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crawler/crawler_total_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="104" column="17" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
+        <state relative-caret-position="528">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
           <folding>
             <element signature="e#46#61#0" expanded="true" />
             <element signature="e#237#312#0" />
-            <element signature="e#1509#4748#0" />
           </folding>
         </state>
       </provider>
