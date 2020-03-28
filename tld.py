@@ -1,5 +1,12 @@
-url_start='http://www.hellosea.net/{a}/{b}/index_{c}.html'
-url_start.format(a='ss')
-url_start.format(b='ss')
-url_start.format(c='ss')
-print(url_start)
+svo_list=[['a','b','c'],['a','b','c'],['a','b','d']]
+result=[]
+for svo_i in svo_list:
+    flag=True
+    for svo in result:
+        if svo[1]==svo_i[1] and svo[0]==svo_i[0] and svo[2]==svo_i[2]:
+            flag=False
+            break
+    if flag:
+        result.append(svo_i)
+
+print(result)

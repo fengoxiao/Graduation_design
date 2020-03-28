@@ -37,6 +37,34 @@ data = cursor.fetchall()
 for record in data:
     print(record)
 '''
+def creat_table_v2(table):
+    sql="""
+    CREATE TABLE {table_name} (
+      `id` int(10) NOT NULL AUTO_INCREMENT,
+      `news_title` varchar(100) DEFAULT NULL COMMENT '标题',
+      `news_type` varchar(10) DEFAULT NULL COMMENT '类型',
+      `news_date` date DEFAULT NULL COMMENT '日期',
+      `news_summary` varchar(100) DEFAULT NULL COMMENT '摘要',
+      `news_content` text COMMENT '正文',
+      `news_web_url` varchar(100) DEFAULT NULL COMMENT '网页URL',
+      `news_source` varchar(100) DEFAULT 'http://www.hellosea.net' COMMENT '来源',
+      PRIMARY KEY (`id`)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+        """.format(table_name=table)
+    cursor.execute(sql)
+
+def drop_table_v2(table):
+    sql_drop="drop table {table_name}".format(table_name=table)
+    cursor.execute(sql_drop)
+
+def table_not_exists_v2(table):
+    sql = "show tables"
+    cursor.execute(sql)
+    tables = cursor.fetchall()
+    for record in tables:
+        if table==record[0]:
+            return False
+    return True
 
 def retrieve_interface(sql):#查询
     cursor.execute(sql)

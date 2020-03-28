@@ -1,8 +1,8 @@
 #!/usr/bin/env python 
 # -*- coding:utf-8 -*-
-from database_test import select_triple_table,creat_triple_table,select_triple_table_neo4j,creat_table_neo4j,record_had_extracting,table_not_exists,truncate_table_neo4j
+from database_test import select_triple_table,creat_triple_table,creat_table_neo4j,record_had_extracting,table_not_exists,drop_table_neo4j
 from EventTriplesExtraction.triple_extraction import TripleExtractor
-from neo4j_interface import creat_map,duplicate_removal_svo,punctuation_remove
+from neo4j_interface import duplicate_removal_svo,punctuation_remove
 
 #MATCH (n {name:"杰克"}) set n:animal return n
 #match (n) detach delete n
@@ -20,10 +20,12 @@ for table in table_list:#读取表，抽取三元组
     #sql = "select id,news_title,news_summary from sea_news_{}".format(table)
     attribute_columns=('id','news_title','news_summary')#属性列
     table_name="sea_news_{}".format(table)
-    table_name_triple="triple_{}".format(table)
-    if table_not_exists(table_name_triple):
-        creat_table_neo4j(table_name_triple)
-        print('创建表成功')
+    table_name_triple="triple_{}_test".format(table)
+    if not table_not_exists(table_name_triple):
+        drop_table_neo4j(table_name_triple)
+        print('删除{}表成功'.format(table_name_triple))
+    creat_table_neo4j(table_name_triple)
+    print('创建{}表成功'.format(table_name_triple))
     data=select_triple_table(table_name,attribute_columns)
     for record in data:
         if record_had_extracting(table_name_triple,table_name,record[0]):
@@ -41,10 +43,10 @@ for table in table_list:#读取表，抽取三元组
             triple_object = punctuation_remove(svo[2])
             if not triple_object:
                 continue
-            triple_subject_label=extractor.entity_annotation(triple_subject)
-            triple_object_label=extractor.entity_annotation(triple_object)
-            if triple_subject_label=='动作':
-                continue
+            triple_subject_label=extractor.entity_annotation_v2(triple_subject)
+            triple_object_label=extractor.entity_annotation_v2(triple_object)
+            # if triple_subject_label=='动作':
+            #             #     continue
             dic_svo = {}
             dic_svo['triple_subject']=triple_subject#主语
             dic_svo['triple_object'] = triple_object#宾语
@@ -60,17 +62,4 @@ for table in table_list:#读取表，抽取三元组
             else:
                 print('写入失败')
     print('完成了{}表的抽取和存储'.format(table))
-
-#根据三元组创建图
-for table in table_list:
-    table_name_triple = "triple_{}".format(table)
-    data=select_triple_table_neo4j(table_name_triple)
-    for record in data:
-        flag=creat_map(record)
-        if  0==flag:
-            print('创建失败:',record)
-        elif 1==flag:
-            print('写入一个关系')
-    print('完成了{}表的图谱创建'.format(table))
-print('end')
 

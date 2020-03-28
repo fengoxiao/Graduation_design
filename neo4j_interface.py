@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 from py2neo import Graph, Node, Relationship
 #NodeMatcher导入无用
-
+import re
 graph = Graph('http://localhost:7474', username='neo4j', password='zhongwei')
 
 #matcher = NodeMatcher(graph)
@@ -58,3 +58,19 @@ def creat_map(record):
         graph.create(map_relation)
         return 1
     return 2
+
+def duplicate_removal_svo(svo_list):
+    #svo_list = [['a', 'b', 'c'], ['a', 'b', 'c'], ['a', 'b', 'd']]
+    result = []
+    for svo_i in svo_list:
+        flag = True
+        for svo in result:
+            if svo[1] == svo_i[1] and svo[0] == svo_i[0] and svo[2] == svo_i[2]:
+                flag = False
+                break
+        if flag:
+            result.append(svo_i)
+    return result
+
+def punctuation_remove(entity):
+    return re.sub(r'[^\w\s]', '',entity)

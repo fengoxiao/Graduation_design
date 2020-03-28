@@ -10,12 +10,16 @@ class LtpParser:
     def __init__(self):
         LTP_DIR = "D:\python\ltp_data_v3.4.0"
         self.segmentor = Segmentor()
+        self.segmentor_label = Segmentor()
         cws_model_path=os.path.join(LTP_DIR, "cws.model")
         self.segmentor.load_with_lexicon(cws_model_path, 'D:\python\ltp_data_v3.4.0\lexicon')  # 加载模型，第二个参数是您的外部词典文件路径
+        self.segmentor_label.load_with_lexicon(cws_model_path, 'D:\python\ltp_data_v3.4.0\lexicon_label')  # 加载模型，第二个参数是您的外部词典文件路径
 
         self.postagger = Postagger()
+        self.postagger_label = Postagger()
         pos_model_path=os.path.join(LTP_DIR, "pos.model")
         self.postagger.load_with_lexicon(pos_model_path, 'D:\python\ltp_data_v3.4.0\lexicon_1')
+        self.postagger_label.load_with_lexicon(pos_model_path, 'D:\python\ltp_data_v3.4.0\lexicon_label_1')
 
         self.parser = Parser()
         self.parser.load(os.path.join(LTP_DIR, "parser.model"))
@@ -72,6 +76,13 @@ class LtpParser:
     def tag_entity_annotation(self,entity):
         words = self.segmentor.segment(entity)
         postags = self.postagger.postag(words)
+        netags = self.recognizer.recognize(words, postags)  # 命名实体识别
+        #print('\t'.join(netags))
+        return words,postags,netags
+
+    def tag_entity_annotation_v2(self,entity):
+        words = self.segmentor_label.segment(entity)
+        postags = self.postagger_label.postag(words)
         netags = self.recognizer.recognize(words, postags)  # 命名实体识别
         #print('\t'.join(netags))
         return words,postags,netags

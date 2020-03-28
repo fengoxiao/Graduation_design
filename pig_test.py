@@ -18,12 +18,19 @@ sents = SentenceSplitter.split(text)  # 分句
 
 segmentor = Segmentor()  # 初始化实例
 #segmentor.load(cws_model_path)  # 加载模型
-segmentor.load_with_lexicon(cws_model_path, 'D:\python\ltp_data_v3.4.0\lexicon')  # 加载模型，第二个参数是您的外部词典文件路径
-#segmentor.load_with_lexicon(cws_model_path, 'D:\python\毕业设计\lexicon')  # 加载模型，第二个参数是您的外部词典文件路径
+segmentor.load_with_lexicon(cws_model_path, 'D:\python\ltp_data_v3.4.0\lexicon')
+segmentor_2 = Segmentor()  # 初始化实例
+# #segmentor.load(cws_model_path)  # 加载模型
+segmentor_2.load_with_lexicon(cws_model_path, 'D:\python\ltp_data_v3.4.0\lexicon_label')  # 加载模型#segmentor.load_with_lexicon(cws_model_path, 'D:\python\毕业设计\lexicon')  # 加载模型，第二个参数是您的外部词典文件路径
+
 postagger = Postagger() # 初始化实例
+postagger_2 = Postagger() # 初始化实例
 postagger.load_with_lexicon(pos_model_path, 'D:\python\ltp_data_v3.4.0\lexicon_1')  # 加载模型
+postagger_2.load_with_lexicon(pos_model_path, 'D:\python\ltp_data_v3.4.0\lexicon_label_1')  # 加载模型
 recognizer = NamedEntityRecognizer() # 初始化实例
+recognizer_2 = NamedEntityRecognizer() # 初始化实例
 recognizer.load(ner_model_path)  # 加载模型
+recognizer_2.load(ner_model_path)  # 加载模型
 parser = Parser() # 初始化实例
 parser.load(par_model_path)  # 加载模型
 labeller = SementicRoleLabeller() # 初始化实例
@@ -36,11 +43,17 @@ def is_name_entity(entity):
 def show_detail(sent):
     words = segmentor.segment(sent)  # 分词
     print('\t'.join(words))
+    words_2 = segmentor_2.segment(sent)  # 分词
+    print('\t'.join(words_2))
     # words = ['元芳', '你', '怎么', '看']  # 分词结果
     postags = postagger.postag(words)  # 词性标注
+    postags_2 = postagger_2.postag(words_2)  # 词性标注
     print('\t'.join(postags))
+    print('\t'.join(postags_2))
     netags = recognizer.recognize(words, postags)  # 命名实体识别
+    netags_2 = recognizer_2.recognize(words_2, postags_2)  # 命名实体识别
     print('\t'.join(netags))
+    print('\t'.join(netags_2))
     name_entity=list(filter(is_name_entity,netags))
     print('\t'.join(name_entity))
 
@@ -55,7 +68,8 @@ def show_detail(sent):
 
 if __name__ == '__main__':
 
-    sents = ['元芳你怎么看', '猪爸爸和猪妈妈和乔治', '猪爷爷年龄', '乔治年龄', '猪爷爷和猪奶奶', '猪爸爸和佩奇']
+    #sents = ['深圳人大代表委员','两家全球邮轮公司','三部委','招商局集团','元芳你怎么看', '猪爸爸和猪妈妈和乔治', '猪爷爷年龄', '乔治年龄', '猪爷爷和猪奶奶', '猪爸爸和佩奇']
+    sents = ['他','他们','诸多挑战','深圳人大代表委员','两家全球邮轮公司','三部委','招商局集团']
 
     for sent in sents:
         # print(sent)

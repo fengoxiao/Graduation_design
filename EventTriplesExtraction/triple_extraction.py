@@ -4,16 +4,19 @@
 # Author: lhy<lhy_in_blcu@126.com,https://huangyong.github.io>
 # Date: 18-3-12
 from EventTriplesExtraction.sentence_parser import *
-import re
+#import re
 
 class TripleExtractor:
     def __init__(self):
         self.parser = LtpParser()
         self.name_entity_dic = {'Ni': '机构', 'Nh': '人物', 'Ns': '地点'}
+        self.n_list=['n','j','nz','ws']
 
     '''文章分句处理, 切分长句，冒号，分号，感叹号等做切分标识'''
-    def split_sents(self, content):
-        return [sentence for sentence in re.split(r'[？?！!。；;：:\n\r]', content) if sentence]
+
+    # def split_sents(self, content):
+    #     return [sentence for sentence in re.split(r'[？?！!。；;：:\n\r]', content) if sentence]
+
 
     '''利用语义角色标注,直接获取主谓宾三元组,基于A0,A1,A2'''
     def ruler1(self, words, postags, roles_dict, role_index):
@@ -117,6 +120,39 @@ class TripleExtractor:
     def is_name_entity(self,entity):
         return entity != 'O'
 
+    def entity_annotation_test(self, entity):#实体标签识别
+        words,postags,netags=self.parser.tag_entity_annotation(entity)
+        # print('\t'.join(words))
+        # print('\t'.join(postags))
+        name_entity=list(filter(self.is_name_entity,netags))
+        entity_label=None
+        if not name_entity:
+            flag_n=[0,1]
+            flag_v=[0,1]
+            for name in postags:
+                if name=='n':
+                    flag_n[0]=1
+                else:
+                    flag_n[1]=0
+                if name =='v':
+                    flag_v[0]=1
+                else:
+                    flag_v[1]=0
+            if flag_n[0]:
+                if flag_v[0]:
+                    entity_label = '事件'
+                else:
+                    entity_label='名词'
+            else:
+                if flag_v[0]:
+                    entity_label = '动作'
+                else:
+                    entity_label='其他'
+        else:
+            entity_type=name_entity[-1]
+            entity_label=self.name_entity_dic[entity_type[-2:]]
+        return entity_label
+
     def entity_annotation(self, entity):#实体标签识别
         words,postags,netags=self.parser.tag_entity_annotation(entity)
         # print('\t'.join(words))
@@ -148,6 +184,38 @@ class TripleExtractor:
         else:
             entity_type=name_entity[-1]
             entity_label=self.name_entity_dic[entity_type[-2:]]
+        return entity_label
+
+    def entity_annotation_v2(self, entity):  # 实体标签识别
+        words, postags, netags = self.parser.tag_entity_annotation_v2(entity)
+        entity_label = netags[-1]
+        if entity_label=='O':
+            if len(postags)==1 and postags[0]=='r':
+                return '代词'
+            flag_n = False
+            flag_v = False
+            for name in postags:
+                if name in self.n_list:
+                    flag_n = True
+                    if flag_v:
+                        break
+                if name == 'v':
+                    flag_v = True
+                    if flag_n:
+                        break
+            if flag_n:
+                if flag_v and postags[-1] not in self.n_list:
+                    entity_label = '事件'
+                else:
+                    entity_label = '名词'
+            else:
+                if flag_v:
+                    entity_label = '动作'
+                else:
+                    entity_label = '其他'
+        else:
+            #entity_type = entity_label
+            entity_label = self.name_entity_dic[entity_label[-2:]]
         return entity_label
 
 

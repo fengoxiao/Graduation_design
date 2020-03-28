@@ -72,6 +72,10 @@ def truncate_table_neo4j(table):
     sql_truncate="truncate table {table_name}".format(table_name=table)
     cursor_neo4j.execute(sql_truncate)
 
+def drop_table_neo4j(table):
+    sql_drop="drop table {table_name}".format(table_name=table)
+    cursor_neo4j.execute(sql_drop)
+
 
 
 def table_not_exists(table):
@@ -120,6 +124,11 @@ def creat_triple_table_test(table_name,keys,values):
 def test_retrieve(sql):#查询
     cursor.execute(sql)
     data = cursor.fetchall()
+    return data
+
+def test_retrieve_neo4j(sql):#查询
+    cursor_neo4j.execute(sql)
+    data = cursor_neo4j.fetchall()
     return data
 
 def retrieve_interface(sql):#查询
