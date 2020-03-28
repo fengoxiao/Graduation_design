@@ -26,15 +26,15 @@ url_start='http://www.hellosea.net/{url_level_1}/{url_level_2}/index_{page}.html
 url_start_first='http://www.hellosea.net/{url_level_1}/{url_level_2}/'
 for key_level_1,value_level_1 in news_total.items():
     count=0
-    table_name="sea_news_{}_v2".format(key_level_1)#新的v2表
+    table_name="sea_news_{}_v2".format(key_level_1)#v2表
     #table_name="sea_news_{}".format(key_level_1)#原表
 
     #更新的时候注释掉这段
-    if not table_not_exists_v2(table_name):
-        drop_table_v2(table_name)
-        print('删除{}表成功'.format(table_name))
-    creat_table_v2(table_name)
-    print('创建{}表成功'.format(table_name))
+    # if not table_not_exists_v2(table_name):
+    #     drop_table_v2(table_name)
+    #     print('删除{}表成功'.format(table_name))
+    # creat_table_v2(table_name)
+    # print('创建{}表成功'.format(table_name))
     # 更新的时候注释掉这段
 
     url_level_1=[key for key in value_level_1.keys()][0]
@@ -43,10 +43,7 @@ for key_level_1,value_level_1 in news_total.items():
     for key_level_3,value_level_3 in value_level_2.items():
         url_level_2=key_level_3
         news_type,page_ceiling=value_level_3
-        flag=False
         for page in range(1, page_ceiling):
-            if flag:
-                break
             if page == 1:
                 url = url_start_first.format(url_level_1=url_level_1,url_level_2=url_level_2)
             else:
@@ -62,8 +59,7 @@ for key_level_1,value_level_1 in news_total.items():
                     # 新方法
                     if select_sea_news(table_name,news_web_url):
                         print('该新闻已存在','跳过该{}，二级网址为{}'.format(url_level_1,url_level_2))
-                        flag = True
-                        break
+                        continue
                     child_response = urllib.request.urlopen(news_web_url).read().decode("utf-8", "ignore")
                     child_element = html.fromstring(child_response)
                     buff = child_element.xpath('//div[@class="bd"]')[0]

@@ -27,6 +27,45 @@ def select_sea_news(table,url):
     if not data:#空
         return False
     return True
+
+
+
+
+#添加新闻
+def select_sea_add_news(table1,table2):
+    count=0
+    sql = "select * from {table} ".format(table=table1)
+    cursor.execute(sql)
+    data = cursor.fetchall()
+    for record in data:
+        url=record[6]
+        if not select_sea_news(table2,url):
+            news_dic = {}
+            news_dic['news_title'] = record[1]
+            news_dic['news_type'] = record[2]
+            news_dic['news_date'] = record[3]
+            news_dic['news_summary'] = record[4]
+            news_dic['news_content'] = record[5]
+            news_dic['news_web_url'] = url
+            news_dic['news_source'] = record[7]
+            if creat_sea_news(table1, news_dic):
+                count+=1
+            else:
+                print('填入失败！？')
+    print('成功填入{}条新闻'.format(count))
+
+
+    return True
+#有用的代码
+'''
+table_list=['domestic','culture','cbhg','economics','edu','international','mil','tech','trave']
+for table in table_list:
+    table1="sea_news_{}_v2".format(table)#创建v2表
+    table2="sea_news_{}".format(table)#原表
+    select_sea_add_news(table1,table2)
+'''
+
+
 # result=select_sea_news('sea_news_domestic','http://www.hellosea.net//Economics/1/72876.html')
 # print(result)
 '''

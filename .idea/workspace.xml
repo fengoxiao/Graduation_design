@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="657db6b7-f393-4a0d-b293-ea0cb46fc846" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crawler/crawler_total_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/crawler_total_v2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crawler/database_test_total.py" beforeDir="false" afterPath="$PROJECT_DIR$/crawler/database_test_total.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,41 +15,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="87" selection-end-column="15" />
-              <folding>
-                <element signature="e#2063#2899#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawler/database_test_total.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="59" column="23" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="23" />
+            <state relative-caret-position="2544">
+              <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
               <folding>
-                <element signature="e#1184#2020#0" />
-                <element signature="e#1862#1956#0" />
-                <element signature="e#1187#1313#0" />
-                <element signature="e#1363#1787#0" />
-                <element signature="e#1843#2273#0" />
-                <element signature="e#2312#2502#0" />
-                <element signature="e#2554#2978#0" />
-                <element signature="e#3032#3460#0" />
-                <element signature="e#3511#3936#0" />
-                <element signature="e#3976#4167#0" />
-                <element signature="e#4219#4645#0" />
-                <element signature="e#4696#5003#0" />
-                <element signature="e#5043#5234#0" />
-                <element signature="e#5275#5467#0" />
-                <element signature="e#5527#5961#0" />
-                <element signature="e#6010#6210#0" />
-                <element signature="e#6265#6694#0" />
-                <element signature="e#6738#6933#0" />
+                <element signature="e#260#604#0" />
               </folding>
             </state>
           </provider>
@@ -56,12 +29,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crawler/crawler_total_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+            <state relative-caret-position="272">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#46#61#0" expanded="true" />
-                <element signature="e#237#312#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawler/crawler_total_v3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4752">
+              <caret line="104" column="17" lean-forward="true" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -69,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/creat_triple_table.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="27" column="46" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="27" selection-end-column="46" />
+            <state relative-caret-position="288">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#46#184#0" expanded="true" />
               </folding>
@@ -183,6 +164,7 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$USER_HOME$/Desktop/test/豆瓣电影250 - 副本.py" />
         <option value="$PROJECT_DIR$/crawler/database_test_total.py" />
+        <option value="$PROJECT_DIR$/crawler/crawler_total_v3.py" />
         <option value="$PROJECT_DIR$/crawler/crawler_total_v2.py" />
       </list>
     </option>
@@ -413,12 +395,13 @@
       <workItem from="1585279767007" duration="807000" />
       <workItem from="1585288936071" duration="7882000" />
       <workItem from="1585360014843" duration="5398000" />
-      <workItem from="1585375848618" duration="1173000" />
+      <workItem from="1585375848618" duration="3108000" />
+      <workItem from="1585385736270" duration="737000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194061000" />
+    <option name="totallyTimeSpent" value="196733000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -512,7 +495,6 @@
     <SUITE FILE_PATH="coverage/$extracting_test_.coverage" NAME="extracting_test_调试 Coverage Results" MODIFIED="1585123511896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sea_crawler_domestic.py" />
     <entry file="file://$PROJECT_DIR$/sea_crawler_international.py" />
     <entry file="file://$PROJECT_DIR$/useless.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -831,20 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ltp_data_v3.4.0/lexicon_label">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ltp_data_v3.4.0/lexicon_label_1">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawler/crawler_total.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
@@ -868,48 +836,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/crawler/database_test_total.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="59" column="23" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="23" />
+        <state relative-caret-position="2544">
+          <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
           <folding>
-            <element signature="e#1184#2020#0" />
-            <element signature="e#1862#1956#0" />
-            <element signature="e#1187#1313#0" />
-            <element signature="e#1363#1787#0" />
-            <element signature="e#1843#2273#0" />
-            <element signature="e#2312#2502#0" />
-            <element signature="e#2554#2978#0" />
-            <element signature="e#3032#3460#0" />
-            <element signature="e#3511#3936#0" />
-            <element signature="e#3976#4167#0" />
-            <element signature="e#4219#4645#0" />
-            <element signature="e#4696#5003#0" />
-            <element signature="e#5043#5234#0" />
-            <element signature="e#5275#5467#0" />
-            <element signature="e#5527#5961#0" />
-            <element signature="e#6010#6210#0" />
-            <element signature="e#6265#6694#0" />
-            <element signature="e#6738#6933#0" />
+            <element signature="e#260#604#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/creat_triple_table.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" column="46" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="27" selection-end-column="46" />
+        <state relative-caret-position="288">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#46#184#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../ltp_data_v3.4.0/lexicon_label">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ltp_data_v3.4.0/lexicon_label_1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/crawler_total_v3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4752">
+          <caret line="104" column="17" lean-forward="true" selection-start-line="104" selection-start-column="17" selection-end-line="104" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/crawler/crawler_total_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+        <state relative-caret-position="272">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#46#61#0" expanded="true" />
-            <element signature="e#237#312#0" />
           </folding>
         </state>
       </provider>
