@@ -12,15 +12,26 @@ def clean_tag(string):
     dd = dr.sub('', string)
     return dd
 
-news_total={'domestic':{'News':{'2':['国内资讯',121]}},
-            'international':{'News':{'3':['国际资讯',121]}},
-            'cbhg':{'cbhg':{'news':['船舶海工',29],'news/1':['船舶海工',23]}},
-            'culture':{'Culture':{'1':['历史文化',121]}},
-            'economics':{'Economics':{'1':['蓝色经济',100]}},
-            'edu':{'Edu':{'1':['教育资讯',62],'2':['海洋高校',41]}},
-            'mil':{'Mil':{'1':['海洋军事',67],'4':['海洋军事',66]}},
-            'tech':{'Tech':{'1':['海洋通讯',12],'3':['互联网+海洋',6],'4':['高新技术',84],'5':['生物技术',10]}},
-            'trave':{'Trave':{'2':['海洋旅游',100]}}
+#注意添加起始页码
+'''
+news_total={'domestic':{'News':{'2':['国内资讯',1,121]}},
+            'international':{'News':{'3':['国际资讯',1,121]}},
+            'cbhg':{'cbhg':{'news':['船舶海工',1,29],'news/1':['船舶海工',1,23]}},
+            'culture':{'Culture':{'1':['历史文化',1,121]}},
+            'economics':{'Economics':{'1':['蓝色经济',1,100]}},
+            'edu':{'Edu':{'1':['教育资讯',1,62],'2':['海洋高校',1,41]}},
+            'mil':{'Mil':{'1':['海洋军事',1,67],'4':['海洋军事',1,66]}},
+            'tech':{'Tech':{'1':['海洋通讯',1,12],'3':['互联网+海洋',1,6],'4':['高新技术',1,84],'5':['生物技术',1,10]}},
+            'trave':{'Trave':{'2':['海洋旅游',1,100]}}
+            }
+'''
+news_total={'domestic':{'News':{'2':['国内资讯',1,121]}},
+            'cbhg':{'cbhg':{'news':['船舶海工',1,29],'news/1':['船舶海工',1,23]}},
+            'culture':{'Culture':{'1':['历史文化',1,121]}},
+            'economics':{'Economics':{'1':['蓝色经济',79,100]}},
+            'edu':{'Edu':{'1':['教育资讯',1,62],'2':['海洋高校',1,41]}},
+            'mil':{'Mil':{'1':['海洋军事',1,67],'4':['海洋军事',1,66]}},
+            'trave':{'Trave':{'2':['海洋旅游',1,100]}}
             }
 url_start='http://www.hellosea.net/{url_level_1}/{url_level_2}/index_{page}.html'
 url_start_first='http://www.hellosea.net/{url_level_1}/{url_level_2}/'
@@ -42,8 +53,9 @@ for key_level_1,value_level_1 in news_total.items():
     print(value_level_2)
     for key_level_3,value_level_3 in value_level_2.items():
         url_level_2=key_level_3
-        news_type,page_ceiling=value_level_3
-        for page in range(1, page_ceiling):
+        #上下限
+        news_type,page_star,page_ceiling=value_level_3
+        for page in range(page_star, page_ceiling):
             if page == 1:
                 url = url_start_first.format(url_level_1=url_level_1,url_level_2=url_level_2)
             else:
