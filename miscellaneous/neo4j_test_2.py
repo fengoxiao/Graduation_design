@@ -1,4 +1,4 @@
-from database_test import neo4j_select_triple_table
+from database_interface import neo4j_select_triple_table
 from EventTriplesExtraction.triple_extraction import TripleExtractor
 
 extractor = TripleExtractor()

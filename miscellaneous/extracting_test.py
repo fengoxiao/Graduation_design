@@ -1,6 +1,6 @@
 #!/usr/bin/env python 
 # -*- coding:utf-8 -*-
-from database_test import test_retrieve
+from database_interface import test_retrieve
 from EventTriplesExtraction.triple_extraction import TripleExtractor
 
 sql = "select news_title,news_summary from sea_news_domestic limit 5  "

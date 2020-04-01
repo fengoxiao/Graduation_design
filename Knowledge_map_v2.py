@@ -1,14 +1,14 @@
 #!/usr/bin/env python 
 # -*- coding:utf-8 -*-
-from database_test import select_triple_table_neo4j
-from EventTriplesExtraction.triple_extraction import TripleExtractor
+from database_interface import select_triple_table_neo4j
 from neo4j_interface import creat_map
 
+#from EventTriplesExtraction.triple_extraction import TripleExtractor
 #清空图
 #match (n) detach delete n
 #清空表
 #truncate_table_neo4j("triple_{}".format('domestic'))
-extractor = TripleExtractor()
+#extractor = TripleExtractor()
 table_list=['domestic','culture','cbhg','economics','edu','international','mil','tech','trave']
 #table_list=['trave']
 

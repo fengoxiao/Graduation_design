@@ -5,48 +5,38 @@ from lxml import html
 import urllib.request
 import re
 import time
-from crawler.database_test_total import creat_sea_news,select_sea_news,creat_table_v2,drop_table_v2,table_not_exists_v2
+from database_crawler_total import creat_sea_news,select_sea_news,creat_table_v2,drop_table_v2,table_not_exists_v2
 # 清理html标签
 def clean_tag(string):
     dr = re.compile(r'<[^>]+>', re.S)
     dd = dr.sub('', string)
     return dd
 
-#注意添加起始页码
-'''
-news_total={'domestic':{'News':{'2':['国内资讯',1,121]}},
-            'international':{'News':{'3':['国际资讯',1,121]}},
-            'cbhg':{'cbhg':{'news':['船舶海工',1,29],'news/1':['船舶海工',1,23]}},
-            'culture':{'Culture':{'1':['历史文化',1,121]}},
-            'economics':{'Economics':{'1':['蓝色经济',1,100]}},
-            'edu':{'Edu':{'1':['教育资讯',1,62],'2':['海洋高校',1,41]}},
-            'mil':{'Mil':{'1':['海洋军事',1,67],'4':['海洋军事',1,66]}},
-            'tech':{'Tech':{'1':['海洋通讯',1,12],'3':['互联网+海洋',1,6],'4':['高新技术',1,84],'5':['生物技术',1,10]}},
-            'trave':{'Trave':{'2':['海洋旅游',1,100]}}
-            }
-'''
-#注意添加起始页码
-news_total={'domestic':{'News':{'2':['国内资讯',1,121]}},
-            'cbhg':{'cbhg':{'news':['船舶海工',1,29],'news/1':['船舶海工',1,23]}},
-            'culture':{'Culture':{'1':['历史文化',1,121]}},
-            'economics':{'Economics':{'1':['蓝色经济',79,100]}},
-            'edu':{'Edu':{'1':['教育资讯',1,62],'2':['海洋高校',1,41]}},
-            'mil':{'Mil':{'1':['海洋军事',1,67],'4':['海洋军事',1,66]}},
-            'trave':{'Trave':{'2':['海洋旅游',1,100]}}
+news_total={'domestic':{'News':{'2':['国内资讯',121]}},
+            'international':{'News':{'3':['国际资讯',121]}},
+            'cbhg':{'cbhg':{'news':['船舶海工',29],'news/1':['船舶海工',23]}},
+            'culture':{'Culture':{'1':['历史文化',121]}},
+            'economics':{'Economics':{'1':['蓝色经济',100]}},
+            'edu':{'Edu':{'1':['教育资讯',62],'2':['海洋高校',41]}},
+            'mil':{'Mil':{'1':['海洋军事',67],'4':['海洋军事',66]}},
+            'tech':{'Tech':{'1':['海洋通讯',12],'3':['互联网+海洋',6],'4':['高新技术',84],'5':['生物技术',10]}},
+            'trave':{'Trave':{'2':['海洋旅游',100]}}
             }
 url_start='http://www.hellosea.net/{url_level_1}/{url_level_2}/index_{page}.html'
 url_start_first='http://www.hellosea.net/{url_level_1}/{url_level_2}/'
 for key_level_1,value_level_1 in news_total.items():
     count=0
-    table_name="sea_news_{}_v2".format(key_level_1)#v2表
+    table_name="sea_news_{}_v2".format(key_level_1)#新的v2表
     #table_name="sea_news_{}".format(key_level_1)#原表
 
     #更新的时候注释掉这段
-    # if not table_not_exists_v2(table_name):
-    #     drop_table_v2(table_name)
-    #     print('删除{}表成功'.format(table_name))
-    # creat_table_v2(table_name)
-    # print('创建{}表成功'.format(table_name))
+    '''
+    if not table_not_exists_v2(table_name):
+        drop_table_v2(table_name)
+        print('删除{}表成功'.format(table_name))
+    creat_table_v2(table_name)
+    print('创建{}表成功'.format(table_name))
+    '''
     # 更新的时候注释掉这段
 
     url_level_1=[key for key in value_level_1.keys()][0]
@@ -54,9 +44,11 @@ for key_level_1,value_level_1 in news_total.items():
     print(value_level_2)
     for key_level_3,value_level_3 in value_level_2.items():
         url_level_2=key_level_3
-        #上下限
-        news_type,page_star,page_ceiling=value_level_3
-        for page in range(page_star, page_ceiling):
+        news_type,page_ceiling=value_level_3
+        flag=False
+        for page in range(1, page_ceiling):
+            if flag:
+                break
             if page == 1:
                 url = url_start_first.format(url_level_1=url_level_1,url_level_2=url_level_2)
             else:
@@ -72,7 +64,8 @@ for key_level_1,value_level_1 in news_total.items():
                     # 新方法
                     if select_sea_news(table_name,news_web_url):
                         print('该新闻已存在','跳过该{}，二级网址为{}'.format(url_level_1,url_level_2))
-                        continue
+                        flag = True
+                        break
                     child_response = urllib.request.urlopen(news_web_url).read().decode("utf-8", "ignore")
                     child_element = html.fromstring(child_response)
                     buff = child_element.xpath('//div[@class="bd"]')[0]

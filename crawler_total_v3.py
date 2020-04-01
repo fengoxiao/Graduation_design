@@ -5,7 +5,7 @@ from lxml import html
 import urllib.request
 import re
 import time
-from crawler.database_test_total import creat_sea_news,select_sea_news,creat_table_v2,drop_table_v2,table_not_exists_v2
+from database_crawler_total import creat_sea_news,select_sea_news
 # 清理html标签
 def clean_tag(string):
     dr = re.compile(r'<[^>]+>', re.S)

@@ -1,6 +1,6 @@
 #!/usr/bin/env python 
 # -*- coding:utf-8 -*-
-from database_test import test_retrieve_neo4j
+from database_interface import test_retrieve_neo4j
 from EventTriplesExtraction.triple_extraction import TripleExtractor
 from neo4j_interface import punctuation_remove
 

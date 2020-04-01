@@ -1,6 +1,6 @@
 #!/usr/bin/env python 
 # -*- coding:utf-8 -*-
-from database_test import select_triple_table,creat_triple_table,creat_table_neo4j,record_had_extracting,table_not_exists,drop_table_neo4j
+from database_interface import select_triple_table,creat_triple_table,creat_table_neo4j,record_had_extracting,table_not_exists,drop_table_neo4j
 from EventTriplesExtraction.triple_extraction import TripleExtractor
 from neo4j_interface import duplicate_removal_svo,punctuation_remove
 
