@@ -21,7 +21,7 @@ crawler	                略	                    爬虫相关的文件，后被�
 
 EventTriplesExtraction	sentence_parse.py	     抽取和标注的预处理
 
-	                      triple_extractio.py	   抽取和标注的主函数和辅助函数
+EventTriplesExtraction  triple_extractio.py	     抽取和标注的主函数和辅助函数
 			      
 lexicon_backup	        略	                    抽取和标注的自定义词典
 
