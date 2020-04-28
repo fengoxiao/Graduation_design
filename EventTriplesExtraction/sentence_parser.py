@@ -3,23 +3,34 @@
 # File: sentence_parser.py
 # Author: lhy<lhy_in_blcu@126.com,https://huangyong.github.io>
 # Date: 18-3-10
+'''
+LTP_DIR：LTP模型的存放目录
+Segmentor_lexicon：分词词典路径
+Segmentor_label_lexicon：标签分词词典路径
+Postagger_lexicon ：  词性标注词典路径
+Postagger_label_lexicon ：标签词性标注词典路径
 
+'''
 import os
 from pyltp import SentenceSplitter,Segmentor, Postagger, Parser, NamedEntityRecognizer, SementicRoleLabeller
 class LtpParser:
     def __init__(self):
         LTP_DIR = "D:\python\ltp_data_v3.4.0"
+        Segmentor_lexicon='D:\python\ltp_data_v3.4.0\lexicon'
+        Segmentor_label_lexicon='D:\python\ltp_data_v3.4.0\lexicon_label'
+        Postagger_lexicon =  'D:\python\ltp_data_v3.4.0\lexicon_1'
+        Postagger_label_lexicon =  'D:\python\ltp_data_v3.4.0\lexicon_label_1'
         self.segmentor = Segmentor()
         self.segmentor_label = Segmentor()
         cws_model_path=os.path.join(LTP_DIR, "cws.model")
-        self.segmentor.load_with_lexicon(cws_model_path, 'D:\python\ltp_data_v3.4.0\lexicon')  # 加载模型，第二个参数是您的外部词典文件路径
-        self.segmentor_label.load_with_lexicon(cws_model_path, 'D:\python\ltp_data_v3.4.0\lexicon_label')  # 加载模型，第二个参数是您的外部词典文件路径
+        self.segmentor.load_with_lexicon(cws_model_path, Segmentor_lexicon)  # 加载模型，第二个参数是您的外部词典文件路径
+        self.segmentor_label.load_with_lexicon(cws_model_path, Segmentor_label_lexicon)  # 加载模型，第二个参数是您的外部词典文件路径
 
         self.postagger = Postagger()
         self.postagger_label = Postagger()
         pos_model_path=os.path.join(LTP_DIR, "pos.model")
-        self.postagger.load_with_lexicon(pos_model_path, 'D:\python\ltp_data_v3.4.0\lexicon_1')
-        self.postagger_label.load_with_lexicon(pos_model_path, 'D:\python\ltp_data_v3.4.0\lexicon_label_1')
+        self.postagger.load_with_lexicon(pos_model_path,Postagger_lexicon)
+        self.postagger_label.load_with_lexicon(pos_model_path,Postagger_label_lexicon)
 
         self.parser = Parser()
         self.parser.load(os.path.join(LTP_DIR, "parser.model"))

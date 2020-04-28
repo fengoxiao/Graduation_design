@@ -45,6 +45,7 @@ for table in table_list:#读取表，抽取三元组
             triple_object_label=extractor.entity_annotation_v2(triple_object)
             # if triple_subject_label=='动作':
             #             #     continue
+            # 主语，宾语，主语标签，宾语标签，动词，原文，原文表，原文表的id
             dic_svo = {}
             dic_svo['triple_subject']=triple_subject#主语
             dic_svo['triple_object'] = triple_object#宾语

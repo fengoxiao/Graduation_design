@@ -1,9 +1,30 @@
 #!/usr/bin/env python 
 # -*- coding:utf-8 -*-
+'''
+接口说明：
+select_triple_table(table,keys):返回新闻表的数据
+record_had_extracting(triple_table,original_text_table,original_text_table_id):
+判断改记录是否已被抽取，若被抽取返回True，否则返回False
+creat_triple_table(table,data): 传入三元组表名和属性字典，在三元组表中插入数据；
+creat_table_neo4j(table):创建三元组表
+table_not_exists(table): 若数据库中存在三元组表，返回False，否则返回True
+drop_table_neo4j(table):删除三元组表
+select_triple_table_neo4j(table):返回三元组表的记录
+user_name=用户名
+pass_word=密码
+database_name=数据库名
+database_name_neo4j=图数据库名
+
+'''
 import pymysql
 #连接数据库
-db = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='zw6262099', db='HelloSea', charset='utf8')
-db_neo4j = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='zw6262099', db='neo4j', charset='utf8')
+user_name='root'
+pass_word='zw6262099'
+database_name='HelloSea'
+database_name_neo4j='neo4j'
+
+db = pymysql.connect(host='127.0.0.1', port=3306, user=user_name, passwd=pass_word, db=database_name, charset='utf8')
+db_neo4j = pymysql.connect(host='127.0.0.1', port=3306, user=user_name, passwd=pass_word, db=database_name_neo4j, charset='utf8')
 
 #truncate table 表名
 #创建游标

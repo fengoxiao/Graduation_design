@@ -29,14 +29,12 @@ for key_level_1,value_level_1 in news_total.items():
     table_name="sea_news_{}_v2".format(key_level_1)#新的v2表
     #table_name="sea_news_{}".format(key_level_1)#原表
 
-    #更新的时候注释掉这段
-    '''
     if not table_not_exists_v2(table_name):
         drop_table_v2(table_name)
         print('删除{}表成功'.format(table_name))
     creat_table_v2(table_name)
     print('创建{}表成功'.format(table_name))
-    '''
+
     # 更新的时候注释掉这段
 
     url_level_1=[key for key in value_level_1.keys()][0]
@@ -114,13 +112,11 @@ for key_level_1,value_level_1 in news_total.items():
 #开始今日热点
 url='http://www.hellosea.net/'
 table_name="sea_news_{}_v2".format('TodayHot')
-'''
 if not table_not_exists_v2(table_name):
     drop_table_v2(table_name)
     print('删除{}表成功'.format(table_name))
 creat_table_v2(table_name)
 print('创建{}表成功'.format(table_name))
-'''
 count=0
 try:
     response = requests.get(url)

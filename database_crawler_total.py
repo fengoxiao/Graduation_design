@@ -1,12 +1,29 @@
 #!/usr/bin/env python 
 # -*- coding:utf-8 -*-
+'''
+接口说明：
+creat_sea_news(table,data):传入新闻表名和属性字典，在新闻表中插入数据；
+select_sea_news(table,url):传入新闻表名和子网页URL，
+若新闻表中有该新闻，返回True，否则返回False
+creat_table_v2(table):创建新闻表
+drop_table_v2(table):删除新闻表
+table_not_exists_v2(table):若数据库中存在新闻表，返回False，否则返回True
+select_sea_add_news(table1,table2):从table1中往table2中添加其不存在的新闻
+user_name=用户名
+pass_word=密码
+database_name=数据库名
+'''
 import pymysql
 #连接数据库
-db = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='zw6262099', db='HelloSea', charset='utf8')
+user_name='root'
+pass_word='zw6262099'
+database_name='HelloSea'
+db = pymysql.connect(host='127.0.0.1', port=3306, user=user_name, passwd=pass_word, db=database_name, charset='utf8')
 
 #创建游标
 cursor = db.cursor()
 #添加数据，表明，属性字典
+#传入新闻表名和属性字典，在新闻表中插入数据；
 def creat_sea_news(table,data):
     result=True
     keys = ', '.join(data.keys())

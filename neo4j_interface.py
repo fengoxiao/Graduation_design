@@ -1,9 +1,20 @@
 #!/usr/bin/env python 
 # -*- coding:utf-8 -*-
+'''
+接口说明：
+punctuation_remove(entity):去实体中除无意义的符号
+duplicate_removal_svo(svo_list):去除三元组列表中重复的三元组
+creat_map(record):将记录写入图中
+user_name=用户名
+pass_word=密码
+
+'''
 from py2neo import Graph, Node, Relationship
 #NodeMatcher导入无用
 import re
-graph = Graph('http://localhost:7474', username='neo4j', password='zhongwei')
+user_name='neo4j'
+pass_word='zhongwei'
+graph = Graph('http://localhost:7474', username=user_name, password=pass_word)
 
 #matcher = NodeMatcher(graph)
 # finded=matcher.match(name='佩奇').first()
