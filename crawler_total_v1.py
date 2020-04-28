@@ -111,7 +111,7 @@ for key_level_1,value_level_1 in news_total.items():
 
 #开始今日热点
 url='http://www.hellosea.net/'
-table_name="sea_news_{}_v2".format('TodayHot')
+table_name="sea_news_{}_v2".format('todayhot')
 if not table_not_exists_v2(table_name):
     drop_table_v2(table_name)
     print('删除{}表成功'.format(table_name))

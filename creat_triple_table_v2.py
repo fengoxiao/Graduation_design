@@ -8,7 +8,7 @@ from neo4j_interface import duplicate_removal_svo,punctuation_remove
 #match (n) detach delete n
 
 extractor = TripleExtractor()
-table_list=['domestic','culture','cbhg','economics','edu','international','mil','tech','trave']
+table_list=['todayhot','domestic','culture','cbhg','economics','edu','international','mil','tech','trave']
 #table_list=['trave']
 
 #清空表

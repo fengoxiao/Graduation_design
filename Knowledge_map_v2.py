@@ -9,7 +9,7 @@ from neo4j_interface import creat_map
 #清空表
 #truncate_table_neo4j("triple_{}".format('domestic'))
 #extractor = TripleExtractor()
-table_list=['domestic','culture','cbhg','economics','edu','international','mil','tech','trave']
+table_list=['todayhot','domestic','culture','cbhg','economics','edu','international','mil','tech','trave']
 #table_list=['trave']
 
 
