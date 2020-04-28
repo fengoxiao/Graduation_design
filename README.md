@@ -1,8 +1,12 @@
 # Graduation_design
 毕业设计
-项目地址：https://github.com/fengoxiao/Graduation_design
+
+项目地址：
+
+https://github.com/fengoxiao/Graduation_design
 
 使用方法：
+
 部署好环境变量之后（部署见下文）
 
 1：按功能运行v1或v2或v3爬虫文件
