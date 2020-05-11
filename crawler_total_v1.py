@@ -43,10 +43,7 @@ for key_level_1,value_level_1 in news_total.items():
     for key_level_3,value_level_3 in value_level_2.items():
         url_level_2=key_level_3
         news_type,page_ceiling=value_level_3
-        flag=False
         for page in range(1, page_ceiling):
-            if flag:
-                break
             if page == 1:
                 url = url_start_first.format(url_level_1=url_level_1,url_level_2=url_level_2)
             else:
@@ -62,8 +59,7 @@ for key_level_1,value_level_1 in news_total.items():
                     # 新方法
                     if select_sea_news(table_name,news_web_url):
                         print('该新闻已存在','跳过该{}，二级网址为{}'.format(url_level_1,url_level_2))
-                        flag = True
-                        break
+                        continue
                     child_response = urllib.request.urlopen(news_web_url).read().decode("utf-8", "ignore")
                     child_element = html.fromstring(child_response)
                     buff = child_element.xpath('//div[@class="bd"]')[0]

@@ -1,5 +1,6 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 # -*- coding:utf-8 -*-
+
 '''
 接口说明：
 punctuation_remove(entity):去实体中除无意义的符号
@@ -9,7 +10,7 @@ user_name=用户名
 pass_word=密码
 
 '''
-from py2neo import Graph, Node, Relationship
+from py2neo import Graph, Node, Relationship,RelationshipMatcher
 #NodeMatcher导入无用
 import re
 user_name='neo4j'
@@ -22,6 +23,88 @@ graph = Graph('http://localhost:7474', username=user_name, password=pass_word)
 #dic={'n': (_117:pig {age: 10, name: '\u732a\u7238\u7238'})}
 # buff=matcher.get(9)
 # print(type(buff))
+'''
+#node_label:实体标签
+#node_name:实体名称
+#node_limit:输出数量，默认为1
+#示例：
+select_node(node_label='事件',node_limit=20)
+'''
+def select_node(node_label='',node_name='',node_limit=1):
+    if not node_label:
+        cql='Match (n) where n.name ="{}" return n,n.name  LIMIT {}'.format(node_name,node_limit)
+    elif not node_name:
+        cql='Match (n:{})  return n,n.name LIMIT {}'.format(node_label,node_limit)
+    else:
+        cql='Match (n:{}) where n.name ="{}" return n,n.name  LIMIT {}'.format(node_label,node_name,node_limit)
+    data_list=graph.run(cql).data()
+    if not data_list:
+        print('not found ! ! !')
+    else:
+        for data in data_list:
+            # print(data['n']._labels)
+            print(','.join(data['n']._labels),':',data['n.name'])
+
+'''
+#model:1：正向查询，2：反向查询，3：无方向查询，4：具体查询
+#node_label:实体标签
+#object_label:宾语标签
+#node_name:实体名称
+#object_name:宾语名称
+#relation:关系名称
+#node_limit:输出数量，默认为5
+#示例：
+select_relation(model=4,node_label='机构',node_name='日本政府',object_name='以安防',object_label='名词',relation='为主')
+'''
+def select_relation(model=1,node_label='',node_name='',relation='',node_limit=5,object_label='',object_name=''):
+    if model==1:
+        cql = 'Match (n:%s)-[:%s]->(m) where n.name="%s" return m,m.name LIMIT %s' % (node_label,relation,node_name,node_limit)
+    # print(Cypher_sql)
+        data_list = graph.run(cql).data()
+        if not data_list:
+            print('not found ! ! !')
+        else:
+            for data in data_list:
+                # print(data['n']._labels)
+                print(node_label,':',node_name,' -- [',relation,'] -> ',','.join(data['m']._labels), ':', data['m.name'])
+    elif model==2:
+        cql = 'Match (n:%s)<-[:%s]-(m) where n.name="%s" return m,m.name LIMIT %s' % (
+        node_label, relation, node_name, node_limit)
+        # print(Cypher_sql)
+        data_list = graph.run(cql).data()
+        if not data_list:
+            print('not found ! ! !')
+        else:
+            for data in data_list:
+                # print(data['n']._labels)
+                print(node_label, ':', node_name, ' <- [', relation, '] -- ', ','.join(data['m']._labels), ':',
+                      data['m.name'])
+    elif model==3:
+        cql = 'Match (n:%s)-[:%s]-(m) where n.name="%s" return m,m.name LIMIT %s' % (
+        node_label, relation, node_name, node_limit)
+        # print(Cypher_sql)
+        data_list = graph.run(cql).data()
+        if not data_list:
+            print('not found ! ! !')
+        else:
+            for data in data_list:
+                # print(data['n']._labels)
+                print(node_label, ':', node_name, ' -- [', relation, '] -- ', ','.join(data['m']._labels), ':',
+                      data['m.name'])
+    elif model==4:
+        cql='Match (n:%s)-[:%s]->(m:%s) where n.name="%s"and m.name="%s" return m'%(node_label,relation,object_label,node_name,object_name)
+        data_list = graph.run(cql).data()
+        if not data_list:
+            print('not found ! ! !')
+        else:
+            for data in data_list:
+                # print(data['n']._labels)
+                print(node_label, ':', node_name, ' -- [', relation, '] -> ', object_label, ':',
+                     object_name)
+    else:
+        print('model Error ! ! ! ')
+
+
 
 def creat_map(record):
     subject_name=record[1]
