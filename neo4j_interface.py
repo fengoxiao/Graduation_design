@@ -44,7 +44,7 @@ def select_node(node_label='',node_name='',node_limit=1):
         for data in data_list:
             # print(data['n']._labels)
             print(','.join(data['n']._labels),':',data['n.name'])
-
+#select_node(node_label='事件',node_limit=20)
 '''
 #model:1：正向查询，2：反向查询，3：无方向查询，4：具体查询
 #node_label:实体标签
@@ -57,18 +57,21 @@ def select_node(node_label='',node_name='',node_limit=1):
 select_relation(model=4,node_label='机构',node_name='日本政府',object_name='以安防',object_label='名词',relation='为主')
 '''
 def select_relation(model=1,node_label='',node_name='',relation='',node_limit=5,object_label='',object_name=''):
+    if relation : relation=':%s'%(relation)
     if model==1:
-        cql = 'Match (n:%s)-[:%s]->(m) where n.name="%s" return m,m.name LIMIT %s' % (node_label,relation,node_name,node_limit)
-    # print(Cypher_sql)
+        cql = 'Match (n:%s)-[r%s]->(m) where n.name="%s" return type(r),r.original_text,r.original_text_table,r.original_text_table_id,m,m.name LIMIT %s' % (node_label,relation,node_name,node_limit)
+        #print(cql)
         data_list = graph.run(cql).data()
         if not data_list:
             print('not found ! ! !')
         else:
             for data in data_list:
-                # print(data['n']._labels)
+                print('原文表：',data['r.original_text_table'],'原文表id：',data['r.original_text_table_id'])
+                print('原文：',data['r.original_text'])
+                if not relation :print('关系类型：',data['type(r)'])
                 print(node_label,':',node_name,' -- [',relation,'] -> ',','.join(data['m']._labels), ':', data['m.name'])
     elif model==2:
-        cql = 'Match (n:%s)<-[:%s]-(m) where n.name="%s" return m,m.name LIMIT %s' % (
+        cql = 'Match (n:%s)<-[r%s]-(m) where n.name="%s" return type(r),r.original_text,r.original_text_table,r.original_text_table_id,m,m.name LIMIT %s' % (
         node_label, relation, node_name, node_limit)
         # print(Cypher_sql)
         data_list = graph.run(cql).data()
@@ -77,10 +80,13 @@ def select_relation(model=1,node_label='',node_name='',relation='',node_limit=5,
         else:
             for data in data_list:
                 # print(data['n']._labels)
+                print('原文表：', data['r.original_text_table'], '原文表id：', data['r.original_text_table_id'])
+                print('原文：', data['r.original_text'])
+                if not relation: print('关系类型：', data['type(r)'])
                 print(node_label, ':', node_name, ' <- [', relation, '] -- ', ','.join(data['m']._labels), ':',
                       data['m.name'])
     elif model==3:
-        cql = 'Match (n:%s)-[:%s]-(m) where n.name="%s" return m,m.name LIMIT %s' % (
+        cql = 'Match (n:%s)-[r%s]-(m) where n.name="%s" return type(r),r.original_text,r.original_text_table,r.original_text_table_id,m,m.name LIMIT %s' % (
         node_label, relation, node_name, node_limit)
         # print(Cypher_sql)
         data_list = graph.run(cql).data()
@@ -89,20 +95,31 @@ def select_relation(model=1,node_label='',node_name='',relation='',node_limit=5,
         else:
             for data in data_list:
                 # print(data['n']._labels)
+                print('原文表：', data['r.original_text_table'], '原文表id：', data['r.original_text_table_id'])
+                print('原文：', data['r.original_text'])
+                if not relation: print('关系类型：', data['type(r)'])
                 print(node_label, ':', node_name, ' -- [', relation, '] -- ', ','.join(data['m']._labels), ':',
                       data['m.name'])
     elif model==4:
-        cql='Match (n:%s)-[:%s]->(m:%s) where n.name="%s"and m.name="%s" return m'%(node_label,relation,object_label,node_name,object_name)
+        cql='Match (n:%s)-[r%s]->(m:%s) where n.name="%s"and m.name="%s" return type(r),r.original_text,r.original_text_table,r.original_text_table_id,m'%(node_label,relation,object_label,node_name,object_name)
         data_list = graph.run(cql).data()
         if not data_list:
             print('not found ! ! !')
         else:
             for data in data_list:
                 # print(data['n']._labels)
+                #print(data['r'])
+                print('原文表：', data['r.original_text_table'], '原文表id：', data['r.original_text_table_id'])
+                print('原文：', data['r.original_text'])
+                if not relation: print('关系类型：', data['type(r)'])
                 print(node_label, ':', node_name, ' -- [', relation, '] -> ', object_label, ':',
                      object_name)
     else:
         print('model Error ! ! ! ')
+#select_relation(model=4,node_label='机构',node_name='日本政府',object_name='以安防',object_label='名词',relation='为主')
+#select_relation(model=1,node_label='机构',node_name='日本政府',relation='为主')
+#select_relation(model=1,node_label='机构',node_name='日本政府')
+#select_relation(model=5,node_label='机构',node_name='日本政府')
 
 
 
