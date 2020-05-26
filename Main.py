@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 from crawler_total_v2_backup import crawler_total
 from creat_triple_table_v2_backup import creat_triple
+from Knowledge_map_v2_backup import knowledge_map
 from neo4j_interface import select_node,select_relation
 news_total={'domestic':{'News':{'2':['国内资讯',121]}},
             'international':{'News':{'3':['国际资讯',121]}},
@@ -20,6 +21,8 @@ crawler_total(news_total)
 #三元组抽取
 creat_triple(table_list)
 
+#图谱绘制
+knowledge_map(table_list)
 #实体查询
 '''
 #node_label:实体标签
