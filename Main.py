@@ -28,14 +28,17 @@ knowledge_map(table_list)
 #node_label:实体标签
 #node_name:实体名称
 #node_limit:输出数量，默认为1
+返回字符串列表
 #示例：
-select_node(node_label='事件',node_limit=20)
+data=select_node(node_label='事件',node_limit=20)
+for record in data:
+    print(record)
 '''
 select_node(node_label='事件',node_limit=20)
 
 #关系查询
 '''
-#model:1：正向查询，2：反向查询，3：无方向查询，4：具体查询
+#model:默认为3，1：正向查询，2：反向查询，3：无方向查询，4：具体查询，5：查谓语
 #node_label:实体标签
 #object_label:宾语标签
 #node_name:实体名称
