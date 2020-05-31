@@ -33,7 +33,7 @@ data=select_node(node_label='事件',node_limit=20)
 for record in data:
     print(record)
 '''
-def select_node(node_label='',node_name='',node_limit=1):
+def select_node(node_label='',node_name='',node_limit=25):
     result=[]
     if not node_label:
         cql='Match (n) where n.name ="{}" return n,n.name  LIMIT {}'.format(node_name,node_limit)
@@ -42,11 +42,27 @@ def select_node(node_label='',node_name='',node_limit=1):
     else:
         cql='Match (n:{}) where n.name ="{}" return n,n.name  LIMIT {}'.format(node_label,node_name,node_limit)
     data_list=graph.run(cql).data()
+    #print(cql)
     if  data_list:
         for data in data_list:
             tip_string=','.join(data['n']._labels)+':'+data['n.name']
             result.append(tip_string)
     return result
+
+
+'''
+import time
+start = time.time()
+
+#data=select_node(node_name='借海洋生态修复',node_limit=1)
+data=select_node(node_label='事件',node_limit=25)
+for record in data:
+    print(record)
+
+end = time.time()
+
+print(end-start)
+'''
 #select_node(node_label='事件',node_limit=20)
 '''
 #model:默认为3，1：正向查询，2：反向查询，3：无方向查询，4：具体查询，5：查谓语
@@ -143,7 +159,6 @@ def select_relation(model=3,node_label='',node_name='',relation='',node_limit=5,
     elif model==5:
         cql = 'Match (n)-[r%s]-(m)  return type(r),r.original_text,r.original_text_table,r.original_text_table_id,n,n.name,m,m.name LIMIT %s' % (
         relation,  node_limit)
-        # print(Cypher_sql)
         data_list = graph.run(cql).data()
         if  data_list:
             for data in data_list:
@@ -160,13 +175,22 @@ def select_relation(model=3,node_label='',node_name='',relation='',node_limit=5,
                 buff.append(tip_string)
                 result.append(buff)
     return result
+#Match  (n)  where  n.name ='中国海洋第一展'  return  n
 #select_relation(model=4,node_label='机构',node_name='日本政府',object_name='以安防',object_label='名词',relation='为主')
-'''
+
+import time
+start = time.time()
+
 data=select_relation(node_name='日本政府',relation='为主')
 for record in data:
     for detail in record:
         print(detail)
-'''
+
+end = time.time()
+
+print(end-start)
+''''''
+
 #select_relation(model=1,node_label='机构',node_name='日本政府')
 #select_relation(model=5,node_label='机构',node_name='日本政府')
 
