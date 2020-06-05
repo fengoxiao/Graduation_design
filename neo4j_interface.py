@@ -177,7 +177,7 @@ def select_relation(model=3,node_label='',node_name='',relation='',node_limit=5,
     return result
 #Match  (n)  where  n.name ='中国海洋第一展'  return  n
 #select_relation(model=4,node_label='机构',node_name='日本政府',object_name='以安防',object_label='名词',relation='为主')
-
+'''
 import time
 start = time.time()
 
@@ -189,7 +189,7 @@ for record in data:
 end = time.time()
 
 print(end-start)
-''''''
+'''
 
 #select_relation(model=1,node_label='机构',node_name='日本政府')
 #select_relation(model=5,node_label='机构',node_name='日本政府')

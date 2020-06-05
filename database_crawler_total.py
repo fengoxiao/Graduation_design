@@ -66,7 +66,7 @@ def creat_table_v2(table):
       `news_content` text COMMENT '正文',
       `news_web_url` varchar(100) DEFAULT NULL COMMENT '网页URL',
       `news_source` varchar(100) DEFAULT 'http://www.hellosea.net' COMMENT '来源',
-      `news_score` varchar(100) DEFAULT NULL COMMENT '分数',
+      `news_score` float DEFAULT NULL COMMENT '分数',
       PRIMARY KEY (`id`)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
         """.format(table_name=table)
